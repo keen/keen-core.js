@@ -67,7 +67,7 @@ gulp.task('watch', ['lint', 'build'], function() {
   gulp.watch([
     'lib/**/*.js',
     'gulpfile.js',
-    'test/**/*.js'
+    'test/index.js'
   ], ['build', 'lint']);
 });
 
