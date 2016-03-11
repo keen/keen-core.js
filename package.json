@@ -1,11 +1,8 @@
 {
   "name": "keen-core",
-  "version": "0.0.0",
-  "description": "Core configuration and utilities used by Keen IO's SDKs",
+  "version": "0.0.1",
+  "description": "Core functionality powering Keen IO's modular JavaScript SDKs",
   "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/keen/keen-core.js.git"

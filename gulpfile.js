@@ -41,7 +41,6 @@ gulp.task('connect', ['build'], function () {
 gulp.task('lint', function () {
   return gulp.src([
       './lib/**/*.js'
-      // './test/**/*.js'
     ])
     .pipe(flow({
       all: false,
