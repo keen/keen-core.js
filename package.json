@@ -1,6 +1,6 @@
 {
   "name": "keen-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core functionality powering Keen IO's modular JavaScript SDKs",
   "main": "lib/index.js",
   "repository": {

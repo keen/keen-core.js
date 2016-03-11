@@ -10,13 +10,10 @@ $ git clone https://github.com/keen/keen-core.js.git && cd keen-core.js
 
 # Install project dependencies
 $ npm install
-
-# Build project with gulp
 # npm install -g gulp
-$ gulp
 
 # Build and launch to view test results
-$ gulp with-tests
+$ gulp
 $ open http://localhost:9003
 ```
 
