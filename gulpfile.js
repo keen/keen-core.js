@@ -18,16 +18,13 @@ gulp.task('default', ['build', 'connect', 'watch']);
 
 gulp.task('build', function(){
   return browserify({
-      entries: './test/index.js',
+      entries: './lib/index.js',
       debug: true
     })
     .bundle()
-    .pipe(source('bundle.js'))
+    .pipe(source('keen-core.js'))
     .pipe(buffer())
-    .pipe(compress())
     .on('error', gutil.log)
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./test'));
 });
 
@@ -80,8 +77,15 @@ gulp.task('test:tape', function(){
   })
   .bundle()
   .pipe(tapeRunner())
+  .on('error', gutil.log)
   .on('results', gutil.log)
-  .pipe(process.stdout);
+  .pipe(process.stdout)
+  .pipe(source('bundle.js'))
+  .pipe(buffer())
+  // .pipe(compress())
+  .pipe(sourcemaps.init({ loadMaps: true }))
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest('./test'));
 });
 
 gulp.task('test:karma', ['build'], function(done) {

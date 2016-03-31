@@ -4,6 +4,7 @@ npm-debug.log
 
 # Test bundles
 test/bundle.js
+test/keen-core.js
 test/*.map
 
 # Misc
