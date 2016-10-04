@@ -6,6 +6,13 @@
 **BREAKING:**
 -->
 
+<a name="0.1.0"></a>
+# 0.1.0 Manage modular namespace
+
+**FIXED:**
+* Modular SDKs containing this release will coalesce into a shared global namespace, rather than colliding and overwriting one another, and will store a reference to legacy versions of keen-js when detected. This legacy version can be referenced with `Keen.legacyVersion`, or returned to the `Keen` namespace by calling `var ModularLibs = Keen.noConflict();`.
+
+
 <a name="0.0.2"></a>
 # 0.0.2 RequireJS fix
 
