@@ -19,8 +19,7 @@ gulp.task('default', ['build', 'connect', 'watch']);
 gulp.task('build', function(){
   return browserify({
       entries: './lib/index.js',
-      debug: true,
-      standalone: 'Keen'
+      debug: true
     })
     .bundle()
     .pipe(source('keen-core.js'))
