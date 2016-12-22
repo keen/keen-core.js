@@ -116,3 +116,37 @@ test('.url()', function(t){
 
   t.end();
 });
+
+test('.extendLibrary()', function(t){
+  var test = {
+    'boolean': true,
+    'function': function(){},
+    'number': 123,
+    'object': {
+      'nested': {
+        'value': 987
+      }
+    },
+    'string': 'some-string',
+    'prototype': {
+      'method': function(a, b){ return a + b; }
+    }
+  };
+  App.extendLibrary(App, test);
+  t.equal(App.boolean, test.boolean,
+    'Should return an inherited boolean');
+  t.equal(App.function, test.function,
+    'Should return an inherited function');
+  t.equal(App.number, test.number,
+    'Should return an inherited number');
+  t.equal(App.string, test.string,
+    'Should return an inherited string');
+  t.equal(App.object.nested.value, test.object.nested.value,
+    'Should return an inherited object');
+  t.equal(App.prototype.method, test.prototype.method,
+    'Should return an inherited prototype method');
+
+  var app = new App();
+  t.equal(app.method(1, 2), 3,
+    'Should return an appropriate value from the prototype method');
+});
