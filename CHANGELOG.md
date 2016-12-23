@@ -5,6 +5,13 @@
 **NEW:**
 **BREAKING:**
 -->
+<a name="0.1.1"></a>
+# 0.1.1 Exclude legacy SDKs from namespace blending
+
+**FIXED:**
+* This patch improves the `Keen.extendLibrary()` function by excluding earlier versions of `Keen.prototype` methods from being blended into the global namespace of more recent SDKs.
+
+
 <a name="0.1.0"></a>
 # 0.1.0 Manage modular namespace
 

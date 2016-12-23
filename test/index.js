@@ -127,6 +127,7 @@ test('.extendLibrary()', function(t){
         'value': 987
       }
     },
+    'resources': {},
     'string': 'some-string',
     'prototype': {
       'method': function(a, b){ return a + b; }
