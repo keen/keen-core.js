@@ -5,6 +5,13 @@
 **NEW:**
 **BREAKING:**
 -->
+<a name="0.1.2"></a>
+# 0.1.2 Update resource map
+
+**NEW:**
+* This patch includes resource mappings for `events` and `queries`.
+
+
 <a name="0.1.1"></a>
 # 0.1.1 Exclude legacy SDKs from namespace blending
 
