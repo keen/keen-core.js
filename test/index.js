@@ -106,13 +106,16 @@ test('.url()', function(t){
   });
 
   t.equal(app.url('base'), defaultProtocol + '://' + app.config.host,
-    'Should return the correct url for the \'base\' resource');
+    'Should return the correct URL for the \'base\' resource');
 
   t.equal(app.url('projectId'), defaultProtocol + '://' + app.config.host + '/3.0/projects/123',
-    'Should return the correct url for the \'projectId\' resource');
+    'Should return the correct URL for the \'projectId\' resource');
 
   t.equal(app.url('base', { key: true }), defaultProtocol + '://' + app.config.host + '?key=true',
-    'Should return the correct url with provided query params');
+    'Should return the correct URL with provided query params');
+
+  t.equal(app.url('events', undefined), app.url('events'),
+    'Should return the correct URL when second argument is undefined');
 
   t.end();
 });
