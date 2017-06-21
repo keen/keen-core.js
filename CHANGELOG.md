@@ -5,6 +5,14 @@
 **NEW:**
 **BREAKING:**
 -->
+
+<a name="0.1.3"></a>
+# 0.1.3 Fix `window.navigator` check for IE10
+
+**FIXED:**
+* This patch fixes the way `window.navigator` is referenced to avoid errors in environments that expose non-standard `window` objects, such as React Native.
+
+
 <a name="0.1.2"></a>
 # 0.1.2 Update resource map
 
