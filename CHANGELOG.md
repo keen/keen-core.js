@@ -5,6 +5,12 @@
 **NEW:**
 **BREAKING:**
 -->
+<a name="0.2.0"></a>
+# 0.2.0 Datasets Resource
+
+**NEW:**
+* Add a URL pattern for the Cached Datasets API resource (#8).
+
 
 <a name="0.1.3"></a>
 # 0.1.3 Fix `window.navigator` check for IE10
